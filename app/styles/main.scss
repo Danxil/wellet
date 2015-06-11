@@ -91,6 +91,19 @@ body {
 
       }
 
+      .couple {
+        @media (max-width: $md) {
+          display: table;
+          width: 100%;
+          font-size: 0;
+
+          .item {
+            height: auto;
+            display: table-cell;
+          }
+        }
+      }
+
       .item {
         position: relative;
         height: 300px;
@@ -283,15 +296,6 @@ body {
           display: inline-block;
           width: 50%;
           vertical-align: top;
-
-          @media (max-width: $md) {
-            display: table-cell;
-            font-size: 0;
-          }
-
-          @media (max-width: $md) {
-            display: table-cell;
-          }
 
           &.take-two-line {
 
