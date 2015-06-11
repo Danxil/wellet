@@ -1,0 +1,71 @@
+
+.footer {
+  padding-top: 100px;
+  padding-bottom: 80px;
+
+  .footer-items {
+    display: table;
+    font-size: 0;
+    width: 100%;
+    table-layout: fixed;
+
+    > .item {
+      display: table-cell;
+      vertical-align: top;
+      border-left: 1px solid $line-border-color;
+      padding-left: 20px;
+      padding-top: 10px;
+
+      &:first-child {
+        border-left: 0;
+
+        .links-list {
+          > .item {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .title {
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+
+      .links-list {
+        margin-top: 10px;
+        > .item {
+          line-height: 20px;
+
+          > .link {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .payments-methods {
+        .link {
+          .img {
+            height: 40px;
+          }
+        }
+      }
+
+      > .text {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .social-btn {
+        border: 1px solid $main-border-color;
+        display: inline-block;
+        padding: 5px;
+        margin-top: 30px;
+
+        .icon {
+          display: inline-block;
+          width: 20px;
+        }
+      }
+    }
+  }
+}
