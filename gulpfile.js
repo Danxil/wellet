@@ -39,10 +39,12 @@ gulp.task('scripts', function () {
 
 gulp.task('content', function () {
   return gulp.src('app/content/**/*')
-    .pipe(gulp.dest('.tmp/content'));
+    .pipe(gulp.dest('.tmp/content'))
+    .pipe(gulp.dest('dist/content'));
 });
 
-gulp.task('html', ['styles', 'scripts', 'content'], function () {
+
+gulp.task('html', ['styles', 'scripts'], function () {
   var assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
   return gulp.src('app/*.html')
@@ -130,7 +132,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'scripts', 'extras'], function () {
+gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'scripts', 'extras', 'content'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
