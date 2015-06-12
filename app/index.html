@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>wellet</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" type="image/ico" href="favicon.png">
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -41,27 +42,28 @@
               </li>
               <li class="item">
                 <a class="link" href="">
-                  <img class="icon" src="images/icons/camera.png"/>
+                  <img class="icon hidden-sm" src="images/icons/camera.png"/>
                   Instagram
                 </a>
               </li>
               <li class="item">
                 <a class="link" href="">
-                  <img class="icon" src="images/icons/person.png"/>
+                  <img class="icon hidden-sm" src="images/icons/person.png"/>
                   Мои покупки
                 </a>
               </li>
               <li class="item">
-                <img class="icon" src="images/icons/cart.png"/>
+                <img class="icon hidden-sm" src="images/icons/cart.png"/>
                 <a class="link" href="">Корзина (14 000 ₸)</a>
               </li>
             </ul>
           </div>
-          <div class="search-wrapper">
+          <div class="search-wrapper hidden-sm">
             <a class="search-btn" href="">
               <img class="icon" src="images/icons/lens.png" width="20" alt=""/>
             </a>
           </div>
+          <a class="mobile-menu-toggler visible-sm" href=""><span></span></a>
         </header>
         <div class="content">
           <div class="media-block">
@@ -101,18 +103,20 @@
               </div>
             </div>
             <div class="section two">
-              <a href="" class="item product">
-                <img class="icon" src="content/images/2/2.jpg" alt=""/>
-                <p class="price right bottom">
-                  <span class="">5 800 ₸</span>
-                </p>
-              </a>
-              <div href="" class="item share bg-4">
-                <div class="content-block-wrapper">
-                  <div class="content-block">
-                    <img class="arrow" src="images/icons/arrow.png" alt=""/>
-                    <h2 class="title">Лето рядом</h2>
-                    <h3 class="subtitle">Летняя коллекция</h3>
+              <div class="couple">
+                <a href="" class="item product">
+                  <img class="icon" src="content/images/2/2.jpg" alt=""/>
+                  <p class="price right bottom">
+                    <span class="">5 800 ₸</span>
+                  </p>
+                </a>
+                <div href="" class="item share bg-4">
+                  <div class="content-block-wrapper">
+                    <div class="content-block">
+                      <img class="arrow" src="images/icons/arrow.png" alt=""/>
+                      <h2 class="title">Лето рядом</h2>
+                      <h3 class="subtitle">Летняя коллекция</h3>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -140,7 +144,7 @@
                 </div>
                 <div class="sub-section take-two-line">
                   <a href="" class="item product">
-                    <img class="icon" src="content/images/10_SF1244-00_3XK_20.jpg" alt=""/>
+                    <span style="background-image: url('content/images/10_SF1244-00_3XK_20.jpg')" class="icon"></span>
                     <p class="price right top">
                       <span class="">5 800 ₸</span>
                     </p>
@@ -247,6 +251,7 @@
 
       <!-- build:js scripts/main.js -->
       <script src="scripts/main.js"></script>
+      <script src="scripts/menu-toggler.js"></script>
       <!-- endbuild -->
 </body>
 </html>

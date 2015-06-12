@@ -88,7 +88,7 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts', 'scripts', 'content'], function () {
+gulp.task('serve', ['styles', 'scripts'], function () {
   browserSync({
     notify: false,
     port: 9000,
@@ -110,6 +110,7 @@ gulp.task('serve', ['styles', 'fonts', 'scripts', 'content'], function () {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/scripts/**/*.coffee', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('app/content/**/*', ['content']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);

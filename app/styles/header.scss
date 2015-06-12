@@ -1,0 +1,120 @@
+@import	"variables";
+
+.header {
+  display: table;
+  font-size: 0;
+  width: 100%;
+  position: relative;
+
+  .logo {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .top-menu-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @media (max-width: $md) {
+      display: none;
+      width: 100%;
+      padding: 0;
+
+      .top-menu {
+        .item {
+          display: block;
+
+          &:first-child {
+            .link {
+              border-top: 0;
+            }
+          }
+
+          .link {
+            line-height: 30px;
+            display: block;
+            border-top: 1px solid $light-border-color;
+          }
+        }
+      }
+    }
+  }
+
+  .top-menu {
+    display: table;
+    width: 100%;
+
+    > .item {
+      display: table-cell;
+      vert-align: top;
+      text-align: center;
+
+      .link {
+        font-size: 14px;
+      }
+
+      .icon {
+        max-height: 18px;
+        vertical-align: -4px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .search-wrapper {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+.mobile-menu-toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 28px;
+  height: 30px;
+
+  /* on activation */
+  &.on span {
+    background-color: transparent;
+  }
+  &.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  &.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+
+  span {
+    position: relative;
+    display: block;
+    top: 12px;
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -9px;
+    }
+
+    &:after{
+      top: 9px;
+    }
+  }
+
+  span,
+  span:after,
+  span:before {
+    width: 100%;
+    height: 5px;
+    background-color: #888;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+}

@@ -2,6 +2,6 @@
   "name": "wellet",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.4"
   }
 }

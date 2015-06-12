@@ -1,7 +1,13 @@
+@import	"variables";
 
 .footer {
   padding-top: 100px;
   padding-bottom: 80px;
+
+  @media (max-width: $sm) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
 
   .footer-items {
     display: table;
@@ -9,12 +15,36 @@
     width: 100%;
     table-layout: fixed;
 
-    > .item {
+    @media (max-width: $sm) {
+      display: block;
+
+      > .item {
+        display: inline-block !important;
+        width: 50%;
+        border-left: 0 !important;
+
+        &:nth-child(2n) {
+          text-align: right;
+        }
+      }
+    }
+
+    @media (max-width: $xs) {
+      > .item {
+        display: inline-block !important;
+        width: 100%;
+        text-align: center !important;
+        margin-top: 20px;
+      }
+    }
+
+      > .item {
       display: table-cell;
       vertical-align: top;
       border-left: 1px solid $line-border-color;
       padding-left: 20px;
       padding-top: 10px;
+      box-sizing: border-box;
 
       &:first-child {
         border-left: 0;

@@ -1,0 +1,30 @@
+@import	"variables";
+
+.hidden-md {
+  @media (max-width: $lg) {
+    display: none !important;
+  }
+}
+
+.hidden-sm {
+  @media (max-width: $md) {
+    display: none !important;
+  }
+}
+
+
+.visible-md {
+  display: none !important;
+
+  @media (max-width: $lg) {
+    display: block !important;
+  }
+}
+
+.visible-sm {
+  display: none !important;
+
+  @media (max-width: $md) {
+    display: block !important;
+  }
+}
